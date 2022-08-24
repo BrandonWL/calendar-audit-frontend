@@ -24,12 +24,12 @@ const authRequestInterceptor = (config) => {
 
 export const axiosClient = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
-  timeout: 1000,
+  timeout: 5000,
 });
 
 axiosClient.interceptors.request.use(authRequestInterceptor);
 
 export const axiosClientNoAuth = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
-  timeout: 1000,
+  timeout: 5000,
 });

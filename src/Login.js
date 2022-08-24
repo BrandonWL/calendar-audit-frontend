@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { axiosClientNoAuth } from "./lib/axios-client";
 import { useSearchParams } from "react-router-dom";
+import GoogleButton from "react-google-button";
 
 export const Login = () => {
   const clientId = process.env.REACT_APP_CLIENT_ID;
@@ -26,5 +27,5 @@ export const Login = () => {
     );
   };
 
-  return <button onClick={login}>Activate Lasers</button>;
+  return <GoogleButton onClick={login} />;
 };
